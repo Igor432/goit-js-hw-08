@@ -12,12 +12,14 @@ const iframe = document.querySelector('iframe');
         console.log('title:', title);
     });
 
-    const onPlay = function timeupdate(data) {
-const timeSec = data.seconds
-localStorage.setItem("videoplayer-current-time", timeSec);
-console.log(data.seconds);
+  
 
-};
+    const onPlay = (data) => {
+        const timeSec = data.seconds;
+        localStorage.setItem("videoplayer-current-time", timeSec);
+        console.log(data.seconds);
+
+    };
     
 
 const timeUpdate = localStorage.getItem("videoplayer-current-time");
