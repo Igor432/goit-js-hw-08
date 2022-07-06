@@ -37,10 +37,8 @@ function checkData() {
 }
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
     localStorage.removeItem(STORAGE_KEYS);
     event.currentTarget.reset();
-
 
 
 })
